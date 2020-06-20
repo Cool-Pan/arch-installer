@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # pkg-arch.sh
-# @Version: v11.9.2
+# @Version: v11.9.3
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
 green='\033[32m'
@@ -243,7 +243,7 @@ sudo pacman -S $(echo '
         # 安全 Shell
         Secure_Shell="openssh x11-ssh-askpass xorg-xauth"
     # 网络安全
-    Network_Security="bind-tools dnscrypt-proxy nmap ntop tcpdump wireshark-qt"
+    Network_Security="bind-tools dnscrypt-proxy nmap ntop tcpdump wireshark-qt whois"
     # 防火墙
     Firewall_Management="ufw gufw"
     # 屏幕锁
