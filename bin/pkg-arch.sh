@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # pkg-arch.sh
-# @Version: v11.9.3
+# @Version: v11.9.4
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
 green='\033[32m'
@@ -149,8 +149,8 @@ sudo pacman -S $(echo '
     # 文字输入
         # 输入法框架
         Input_Method="fcitx5 fcitx5-gtk fcitx5-qt kcm-fcitx5"
-        # 输入法引擎
-        Input_Method_Engine="fcitx5-rime"
+        # Fcitx 增强
+        Fcitx_Addons="libime fcitx5-material-color"
     # 磁盘
         # 分区工具
         Partitioning_Tool="parted partitionmanager"
@@ -270,7 +270,7 @@ sudo pacman -S $(echo '
     # 版本控制系统
     Version_Control_System="git tig cvs subversion"
     # 自动化构建工具
-    Build_Automation="cmake gradle maven"
+    Build_Automation="cmake extra-cmake-modules gradle maven"
     # 各语言工具   JSON ⊢----shell----⊣  Tag
     Language_Tool="jq shellcheck shfmt ctags"
     # API 文档浏览器
