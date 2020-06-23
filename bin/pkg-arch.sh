@@ -150,7 +150,7 @@ sudo pacman -S $(echo '
         # 输入法框架
         Input_Method="fcitx5 fcitx5-gtk fcitx5-qt kcm-fcitx5"
         # Fcitx 增强
-        Fcitx_Addons="libime fcitx5-material-color"
+        Fcitx_Addons="fcitx5-rime opencc fcitx5-material-color"
     # 磁盘
         # 分区工具
         Partitioning_Tool="parted partitionmanager"
@@ -213,7 +213,7 @@ sudo pacman -S $(echo '
         # 查看 PDF, DjVu 文档
         PDF_And_DjVu="okular pdfgrep"
         # 查看 CHM 文档
-        CHM_And_DOC="kchmviewer"
+        CHM_And_DOC="xchm"
         # 电子书
         EBook_Manager="calibre"
     # 笔记
