@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
 # 安装 DejaVuSansMono Nerd Font Mono

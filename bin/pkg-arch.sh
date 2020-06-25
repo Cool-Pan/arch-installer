@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # pkg-arch.sh
 # @Version: v11.9.4

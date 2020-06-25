@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo -e "是否批量安裝所有包? [ y(Yes) / any(No) ]"
 read -r yes_or_no_1
