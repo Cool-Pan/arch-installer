@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # pkg-arch.sh
-# @Version: v11.9.4
+# @Version: v11.9.5
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
 green='\033[32m'
@@ -64,7 +64,7 @@ sudo pacman -S $(echo '
             # 表情符号
             Emoji_And_Symbol="noto-fonts-emoji ttf-joypixels"
             # 额外的字体
-            Extra_Font="noto-fonts-extra texlive-fontsextra"
+            Extra_Font="noto-fonts-extra"
         # 窗口合成
         X_Compositor="picom"
         # 壁纸及壁纸设置工具
@@ -221,8 +221,6 @@ sudo pacman -S $(echo '
         Mind_Mapping="vym"
         # 笔记管理
         Note_Manager="vnote-git"
-        # Tex
-        TeX_Editor="texlive-core texlive-bin texlive-lang"
     # 字典和词库
     Dictionary_And_Thesaurus="goldendict"
     # 翻译和本地化
