@@ -2,7 +2,7 @@
 
 #
 # pkg-arch.sh
-# @version: v12.0.0
+# @version: v12.0.1
 #
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
@@ -77,7 +77,7 @@ sudo pacman -S $(echo '
         # 博客引擎
         Blog_Engines="hugo opencc"
     # 娱乐
-        # 数字发行平台
+        # 发行平台
         Distribution_Platform="steam lib32-amdvlk lib32-nvidia-utils"
 
 
@@ -98,11 +98,11 @@ sudo pacman -S $(echo '
         Drivers_Interface="alsa-utils alsa-plugins"
         # 声音服务
         Sound_Server="pulseaudio pavucontrol"
-        # 音频标签编辑
-        Tag_Editor="thunar-media-tags-plugin"
+        # 音频播放器
+        Audio_Player="cmus"
     # 视频
-        # 音视频播放
-        Media_Player="parole gst-libav"
+        # 视频播放器
+        Video_Player="mpv"
         # 视频转换
         Video_Converter="ffmpeg"
         # 录屏
@@ -139,13 +139,13 @@ sudo pacman -S $(echo '
 ##### Documents (文件) #####
     # 文件
         # 文件管理
-        File_Manager="ranger atool highlight"
+        File_Manager="ranger highlight"
         # 文件同步
         Synchronization="rsync"
         # 文件转换
         Doc_Converter="dos2unix"
         # 压缩工具
-        Compression_Tool="p7zip unrar brotli"
+        Compression_Tool="p7zip unrar atool brotli"
     # 文字
         # grep 替代品
         GREP_Alternatives="ripgrep fzf"
@@ -187,7 +187,7 @@ sudo pacman -S $(echo '
 
 
 ##### Programming (编程) #####
-    # 语言及工具
+    # 语言及其工具
         Android="jadx"
         __C_CPP="gdb"
         _____JS="nodejs npm"
