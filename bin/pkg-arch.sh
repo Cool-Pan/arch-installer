@@ -2,7 +2,7 @@
 
 #
 # pkg-arch.sh
-# @version: v12.0.1
+# @version: v12.0.2
 #
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
@@ -49,12 +49,14 @@ sudo pacman -S $(echo '
     # 主题
         # 光标主题    [--ArchCN--]
         Cursor_Theme="vimix-cursors"
+        # GTK2/3/4 主题 [-------Local-------]
+        GTK_XFWM_Theme="whitesur-gtk-theme-git"
+        # QT5 主题                  [-------Local-------]
+        QT_Theme="kvantum-qt5 qt5ct whitesur-kde-theme-git"
         # 图标主题
         Icon_Theme="papirus-icon-theme"
-        # GTK2/3 主题   [------ArchCN------]
-        GTK_XFWM_Theme="mojave-gtk-theme-git"
-        # QT5 主题
-        QT_Theme="kvantum-qt5 qt5ct"
+        # Archlinux 壁纸
+        Wallpaper="archlinux-wallpaper"
         # GRUB2 主题
         GRUB_Theme="grub-theme-vimix"
 
@@ -70,8 +72,8 @@ sudo pacman -S $(echo '
     # 网络服务
         # 网络浏览
         Web_Browser="chromium"
-        # 邮件        [------ArchCN------]
-        Email_Client="thunderbird-beta-bin"
+        # 邮件        [--------------------Local--------------------]
+        Email_Client="thunderbird-beta-bin thunderbird-beta-i18n-zh-cn"
         # 下载管理
         Download_Manager="aria2"
         # 博客引擎
@@ -149,9 +151,9 @@ sudo pacman -S $(echo '
     # 文字
         # grep 替代品
         GREP_Alternatives="ripgrep fzf"
-        # 文本编辑
-        Text_Editor="gvim xclip"
-        # 办公套件     [------------Local------------] [--ArchCN---]
+        # 文本编辑              [-------------------Local-------------------]
+        Text_Editor="gvim xclip vim-youcompleteme-git python-requests-futures"
+        # 办公套件     [-------------------Local-------------------]
         Office_suites="wps-office wps-office-mui-zh-cn ttf-wps-fonts"
     # 电子书
         # CHM 浏览
@@ -189,7 +191,7 @@ sudo pacman -S $(echo '
 ##### Programming (编程) #####
     # 语言及其工具
         Android="jadx"
-        __C_CPP="gdb"
+        __C_CPP="gdb clang lld lldb libc++"
         _____JS="nodejs npm"
         ___JSON="jq"
         ___Java="jdk-openjdk jre-openjdk jdk8-openjdk jre8-openjdk"
@@ -209,7 +211,7 @@ sudo pacman -S $(echo '
         Android_IDE="android-studio"
         ___Java_IDE="intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre"
         ____Web_IDE="webstorm webstorm-jre"
-        __C_CPP_IDE="clion clion-jre clion-cmake clion-gdb"
+        __C_CPP_IDE="clion clion-jre clion-cmake clion-gdb clion-lldb"
         _Python_IDE="pycharm-professional"
         __DB_Client="datagrip datagrip-jre"
 
