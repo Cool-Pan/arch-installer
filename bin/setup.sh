@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # setup.sh
-# @Version: v6.6.3
+# @Version: v6.6.4
 
 # Defining variables.
 
@@ -53,15 +53,15 @@ Update_System_Clock
 Partition_Disk() {
     echo -e "$red >>>>> Partition the disks $reset"
     parted -s --align optimal /dev/"$2" mklabel gpt
-    parted -s --align optimal /dev/"$2" mkpart primary 0% 2G
-    parted -s --align optimal /dev/"$2" mkpart primary 2G 5G
+    parted -s --align optimal /dev/"$2" mkpart primary 0% 3G
+    parted -s --align optimal /dev/"$2" mkpart primary 3G 5G
 
     echo -e "$red >>>>> Encrypt the second disks $reset$yellow(Follow the prompts to enter the password). $reset"
     # 创建密钥
     dd if=/dev/random of=KeyFile4Boot bs=8192 count=1 status=progress
     dd if=/dev/random of=KeyFile4Root bs=8192 count=1 status=progress
     # 加密磁盘
-    cryptsetup -v luksFormat /dev/"$2"2
+    cryptsetup -v --type luks1 luksFormat /dev/"$2"2
     cryptsetup -v luksAddKey /dev/"$2"2 KeyFile4Boot
     cryptsetup -v --type luks2 --cipher aes-xts-plain64 --key-size 512 --hash sha512 --iter-time 5000 --use-random --verify-passphrase --key-file KeyFile4Root luksFormat /dev/"$1"
     # 打开加密磁盘
@@ -111,7 +111,7 @@ Installation_System() {
     vim /etc/pacman.d/mirrorlist
 
     echo -e "$red >>>>> Install the base group. $reset"
-    pacstrap /mnt base linux linux-firmware
+    pacstrap /mnt base linux linux-firmware xfsprogs dhcpcd vi
 }
 
 Installation_System
