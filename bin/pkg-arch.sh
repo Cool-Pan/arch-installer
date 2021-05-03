@@ -2,7 +2,7 @@
 
 #
 # pkg-arch.sh
-# @version: v12.0.2
+# @version: v12.0.3
 #
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
@@ -64,7 +64,7 @@ sudo pacman -S $(echo '
 ##### Internet (互联网) #####
     # 网络连接
         # 网络管理
-        Network_Manager="networkmanager nm-connection-editor network-manager-applet"
+        Network_Manager="networkmanager dnsmasq nm-connection-editor network-manager-applet"
         # 蓝牙管理
         Bluetooth_Manager="bluez bluez-utils blueman"
         # 网络检测
@@ -147,7 +147,7 @@ sudo pacman -S $(echo '
         # 文件转换
         Doc_Converter="dos2unix"
         # 压缩工具
-        Compression_Tool="p7zip unrar atool brotli"
+        Compression_Tool="p7zip unrar zip unzip atool brotli"
     # 文字
         # grep 替代品
         GREP_Alternatives="ripgrep fzf"
@@ -174,8 +174,8 @@ sudo pacman -S $(echo '
         # 屏幕锁
         Screen_Locker="xfce4-screensaver"
     # 网络安全
-        # DNS over HTTPS    [-----------Local-----------]
-        DoH="dnscrypt-proxy dnscrypt-proxy-china-list-git"
+        # DNS               [-----------Local-----------]
+        DNS="dnscrypt-proxy dnscrypt-proxy-china-list-git"
     # 密码学
         # 密码管理
         Password_Manager="gnome-keyring keepassxc"
@@ -204,7 +204,7 @@ sudo pacman -S $(echo '
         # API 浏览   [ArchCN]
         API_Browser="zeal-git"
         # 版本控制
-        Ver_Control="git"
+        Ver_Control="git tig"
         # 自动化构建
         Build_Automation="gradle cmake"
     # 集成开发环境   [--------------------------ArchCN|Local--------------------------]
