@@ -2,7 +2,7 @@
 
 #
 # pkg-arch.sh
-# @version: v12.0.3
+# @version: v12.0.4
 #
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
@@ -34,6 +34,8 @@ sudo pacman -S $(echo '
         Xorg_Server="xorg-server xorg-xev"
         # 屏幕管理
         Screen_Manager="xorg-xrandr arandr"
+        # 自动化工具
+        Automation="xdotool"
     # 桌面环境
         # Xfce4 桌面
         XFCE_DE="xfce4 xfce4-clipman-plugin xfce4-datetime-plugin xfce4-notifyd xfce4-pulseaudio-plugin"
@@ -42,10 +44,10 @@ sudo pacman -S $(echo '
         # 程序启动器
         APP_Launcher="rofi"
     # 字体
-        # 拉丁与 CJK 字体                         [---------ArchCN--------]
-        Latin_CJK_Font="noto-fonts noto-fonts-cjk nerd-fonts-jetbrains-mono"
+        # 拉丁与 CJK 字体          [---------ArchCN--------]
+        Latin_CJK_Font="noto-fonts nerd-fonts-jetbrains-mono noto-fonts-cjk"
         # 符号与表情
-        Symbol_Emoji="noto-fonts-emoji ttf-joypixels"
+        Symbol_Emoji="ttf-joypixels"
     # 主题
         # 光标主题    [--ArchCN--]
         Cursor_Theme="vimix-cursors"
@@ -88,7 +90,7 @@ sudo pacman -S $(echo '
         # 图像浏览
         Image_Viewer="ristretto"
         # 图像处理
-        Image_Processing="imagemagick"
+        Image_Processing="imagemagick potrace"
         # 图形编辑
         Graphics_Editor="krita"
         # 截图
@@ -170,7 +172,7 @@ sudo pacman -S $(echo '
         # 微码
         Microcode="amd-ucode"
         # 安全 Shell
-        Secure_Shell="openssh"
+        Secure_Shell="openssh mosh"
         # 屏幕锁
         Screen_Locker="xfce4-screensaver"
     # 网络安全
@@ -197,7 +199,7 @@ sudo pacman -S $(echo '
         ___Java="jdk-openjdk jre-openjdk jdk8-openjdk jre8-openjdk"
         ____Lua="lua"
         __MySQL="mariadb"
-        _Python="python-pip"
+        _Python="python-pip python-jedi"
         ___Ruby="ruby rubygems"
         __Shell="zenity"
     # 效率工具
