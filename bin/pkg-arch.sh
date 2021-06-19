@@ -2,7 +2,6 @@
 
 #
 # pkg-arch.sh
-# @version: v12.0.4
 #
 
 # This color requires special attention from the user (显示此颜色需要特别注意).
@@ -46,8 +45,6 @@ sudo pacman -S $(echo '
     # 字体
         # 拉丁与 CJK 字体          [---------ArchCN--------]
         Latin_CJK_Font="noto-fonts nerd-fonts-jetbrains-mono noto-fonts-cjk"
-        # 符号与表情
-        Symbol_Emoji="ttf-joypixels"
     # 主题
         # 光标主题    [--ArchCN--]
         Cursor_Theme="vimix-cursors"
@@ -73,11 +70,11 @@ sudo pacman -S $(echo '
         Network_Detection="bind proxychains-ng"
     # 网络服务
         # 网络浏览
-        Web_Browser="chromium"
-        # 邮件        [--------------------Local--------------------]
+        Web_Browser="chromium firefox-developer-edition firefox-developer-edition-i18n-zh-cn"
+        # 邮件        [------ArchCN------] [----------Local----------]
         Email_Client="thunderbird-beta-bin thunderbird-beta-i18n-zh-cn"
         # 下载管理
-        Download_Manager="aria2"
+        Download_Manager="aria2 qbittorrent"
         # 博客引擎
         Blog_Engines="hugo opencc"
     # 娱乐
@@ -138,6 +135,9 @@ sudo pacman -S $(echo '
     # 数学
         # 计算器
         Calculator="bc"
+    # 替代品
+        # 替代   ls  cat find grep   gzip bzip2
+        Replace="exa bat fzf ripgrep pigz pbzip2"
 
 
 ##### Documents (文件) #####
@@ -151,11 +151,9 @@ sudo pacman -S $(echo '
         # 压缩工具
         Compression_Tool="p7zip unrar zip unzip atool brotli"
     # 文字
-        # grep 替代品
-        GREP_Alternatives="ripgrep fzf"
-        # 文本编辑              [-------------------Local-------------------]
-        Text_Editor="gvim xclip vim-youcompleteme-git python-requests-futures"
-        # 办公套件     [-------------------Local-------------------]
+        # 文本编辑              [-------ArchCN------]
+        Text_Editor="gvim xclip vim-youcompleteme-git"
+        # 办公套件     [------------Local------------] [---ArchCN--]
         Office_suites="wps-office wps-office-mui-zh-cn ttf-wps-fonts"
     # 电子书
         # CHM 浏览
@@ -169,6 +167,8 @@ sudo pacman -S $(echo '
 
 ##### Security (安全) #####
     # 系统安全
+        # 内核  [---------------ArchCN--------------]
+        Kernel="linux-mainline linux-mainline-headers"
         # 微码
         Microcode="amd-ucode"
         # 安全 Shell
@@ -238,7 +238,9 @@ sudo systemctl enable tlp.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
 
+# linux-mainline
 # amd-ucode
+sudo mkinitcpio -P
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # dnscrypt-proxy
